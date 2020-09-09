@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### React Routers
+- `npm install react-router-dom`
+- In `App.js` add `import { BrowserRouter as Router, Switch, Route } from "react-router-dom";`
+
+### React Currency Format
+- `npm i react-currency-format`
