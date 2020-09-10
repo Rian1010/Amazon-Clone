@@ -88,4 +88,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - On Firebase, go to Authentication -> Sign-in method -> Email/Password and click enable and then save
 
 - `npm i firebase`
-- In `firebase.js` write: `import firebase from "firebase"`
+- In `firebase.js` write: `import firebase from "firebase";`
+- Add the following to `firebase.js`:
+ 
+```javascript
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+  const db = firebaseApp.firestore();
+  const auth = firebase.auth();
+
+  export { db, auth };
+```
