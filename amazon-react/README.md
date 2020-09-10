@@ -78,6 +78,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - If npm installations don't work, try using `sudo` in front
 
 ### Firebase
+- `sudo npm i -g firebase-tools`
 - `firebase login`
 - `firebase init`
 - Choose: Hosting: Configure and deploy Firebase Hosting sites
@@ -99,3 +100,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
   export { db, auth };
 ```
+
+### Deploying the app
+- `npm run build`
+- `firebase deploy`
