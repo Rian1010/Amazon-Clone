@@ -73,3 +73,19 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### React Currency Format
 - `npm i react-currency-format`
+
+### npm
+- If npm installations don't work, try using `sudo` in front
+
+### Firebase
+- `firebase login`
+- `firebase init`
+- Choose: Hosting: Configure and deploy Firebase Hosting sites
+- Choose: Use an existing project
+- Write: build
+- `firebase deploy`
+- On firebase, go to the project, go to the general settings at the very bottom, and get the config var for the `firebase.js` file
+- On Firebase, go to Authentication -> Sign-in method -> Email/Password and click enable and then save
+
+- `npm i firebase`
+- In `firebase.js` write: `import firebase from "firebase"`
