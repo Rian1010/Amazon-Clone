@@ -40,14 +40,14 @@ function Home() {
                 <Product 
                     id="83012348"
                     title="Gemlux Electric Stand Blender - Mixer, Smoothie Maker, Shaker, Blender, Crusher - For Cream, Cocktail, Shake, Soup etc. - Robust Stainless Steel Blade - Portable & for Worktop BL-430B"
-                    price={58.99}
+                    price={38.90}
                     image="https://images-na.ssl-images-amazon.com/images/I/71dj98%2B8ENL._AC_SL1500_.jpg"
                     rating={3}
                 />
                 <Product
                     id="39810213"
                     title="Stanbow Reading Lamp Book Clamp, Touch Switch, Clamp Lamp, USB Rechargeable, 9 LEDs With 3 Colour Temperatures, 360° Flexible Eye Protection, Mini Dimmable Clamp Light"
-                    price={58.99}
+                    price={9.99}
                     image="https://images-na.ssl-images-amazon.com/images/I/51Vy0n7PCnL._AC_SL1500_.jpg"
                     rating={4}
                 />

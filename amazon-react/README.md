@@ -104,3 +104,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Deploying the app
 - `npm run build`
 - `firebase deploy`
+
+### Stripe 
+- `npm i @stripe/stripe-js`
+- `npm i @stripe/react-stripe-js`
+- import both
+
+### Axios
+- `npm i axios`
+
+### Cloud Functions
+- `firebase init`
+- Choose `Functions: Configure and deploy Cloud Functions``
+- Choose `JavaScript``
+- Type `y`
+- Type `y`
+- cd functions
+- The functions folder is the back-end of the project
