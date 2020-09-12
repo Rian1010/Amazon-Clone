@@ -121,3 +121,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - Type `y`
 - cd functions
 - The functions folder is the back-end of the project
+
+#### Express
+- `npm i express`
+- In `functions/index.js/`, add `const express = require("express");`
+
+#### Emulate
+- Command: `firebase emulators:start`

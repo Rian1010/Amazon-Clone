@@ -60,6 +60,7 @@ function Payment() {
         setDisabled(event.empty);
         setError(event.error ? event.error.message : "");
     }
+    
     return (
         <div className="payment">
             <div className="payment__container">
