@@ -24,8 +24,8 @@ function Orders() {
         } else {
             setOrders([])
         }
-
-  }, [user])
+    
+    }, [user])
     return (
         <div className='orders'>
             <h1>Your orders</h1>
