@@ -129,3 +129,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 #### Emulate
 - In the functions folder: `npm install stripe --save`
 - Command: `firebase emulators:start`
+
+#### Moment
+- `npm install moment`
