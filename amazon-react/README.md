@@ -127,4 +127,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - In `functions/index.js/`, add `const express = require("express");`
 
 #### Emulate
+- In the functions folder: `npm install stripe --save`
 - Command: `firebase emulators:start`

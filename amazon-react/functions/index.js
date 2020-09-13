@@ -16,8 +16,29 @@ app.use(express.json()); // Allows sending data and pass it in JSON format
 // - API routes
 app.get('/', (request, response) => response.status(200).send('hello world'));
 
+app.post('/payments/create', async (request, response) => {
+    const total = request.query.total;
+
+    console.log("Payment req received!! Amount >>>", total);
+
+    const paymentIntent = await stripe.paymentIntents.create({
+        amount: total, // subunits of the currency
+        currency: "eur",
+    });
+    // OK - Created
+    response.status(201).send({
+        clientSecret: paymentIntent.client_secret,
+    });
+});
+
+
 // - Listen command 
 exports.api = functions.https.onRequest(app)
+
+// Example endpoint
+// http://localhost:5001/clone-568b3/us-central1/api
+
+
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
