@@ -11,13 +11,15 @@ import { useQuery } from "react-query";
 
 function Header(event) {
     const  [searchQuery, setSearchQuery] = useState({
-        searchQ: ""
+        searchID: "",
+        searchQ: "",
+        searchPrice: "",
+        searchImage: "",
+        searchRating: ""
     })
     console.log(searchQuery)
     
     // console.log(searchQuery, "HERE")
-
-    let sq = productList.title
 
     // let theSearch = productList.some(searchQuery => searchQuery.title === productList.title)
     
@@ -31,24 +33,39 @@ function Header(event) {
             productList.map(item => {
                 console.log(value, "&", item.title)
                 if(item.title.includes(value)) {
-                    return searchQuery.searchQ = item.title
-                    console.log(searchQuery.searchQ, 1)
-                    // return <Product
-                    // id=""
-                    // title={item.title}
-                    // price={1}
-                    // image=""
-                    // rating={1}
-                    // />
+                    return searchQuery.searchID = item.id, 
+                            searchQuery.searchQ = item.title, 
+                            searchQuery.searchPrice = item.price, 
+                            searchQuery.searchImage = item.image,
+                            searchQuery.searchRating = item.rating,
+                    // console.log(searchQuery.searchQ, 1)
+                     <Product
+                    id=""
+                    title={searchQuery}
+                    price={1}
+                    image=""
+                    rating={1}
+                    />
+                }
+                else if (value == "") {
+                    return searchQuery.searchQ = "",
+                    searchQuery.searchID = "",
+                    searchQuery.searchPrice = "",
+                    searchQuery.searchImage = "",
+                    searchQuery.searchRating = ""
                 }
                 else {
-                    return <h2>Product not found</h2>
+                    return searchQuery.searchQ = "Sorry, No Product Was Found",
+                            searchQuery.searchID = "",
+                            searchQuery.searchPrice = "",
+                            searchQuery.searchImage = "",
+                            searchQuery.searchRating = ""
                 }
             })
                  
             return {
                 ...prevValue,
-                searchQ: value,
+                searchVal: value,
             }
         })
     }
@@ -106,11 +123,11 @@ function Header(event) {
             </div>
         </div>
         <Product 
-            id=""
-            title={the}
-            price={1}
-            image=""
-            rating={1}
+            id={searchQuery.searchID}
+            title={searchQuery.searchQ}
+            price={searchQuery.searchPrice}
+            image={searchQuery.searchImage}
+            rating={searchQuery.searchRating}
         />
         </div>
     )
