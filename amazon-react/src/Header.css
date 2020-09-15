@@ -1,6 +1,7 @@
 .header {
     height: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(0 42 99 / 0.8);
     position: sticky;
@@ -13,6 +14,10 @@
     object-fit: contain;
     margin: 0 20px;
     margin-top: 18px;
+}
+
+.header__searchContainer {
+    width: 55%;
 }
 
 .header__search {

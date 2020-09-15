@@ -93,19 +93,20 @@ function Header(event) {
             <Link to="/">
                 <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
             </Link>
-            <div className="header__search">
-            <form onSubmit={sendSearch} className="header__searchInput">
-                <input 
-                    name="searchQ"
-                    placeholder="Search Product"
-                    onChange={handleSearch}
-                    value={searchQuery} 
-                    type="text"
-                    required
-                />
-                <button className="btn" type="submit">
-                    <SearchIcon className="header__searchIcon" />
-                </button>
+            <div className="header__searchContainer">
+                <form onSubmit={sendSearch} className="header__search">
+                    <input 
+                        name="searchQ"
+                        placeholder="Search Product"
+                        onChange={handleSearch}
+                        value={searchQuery} 
+                        type="text"
+                        className="header__searchInput"
+                        required
+                    />
+                    <button className="btn" type="submit">
+                        <SearchIcon className="header__searchIcon" />
+                    </button>
                 </form>
             </div>
 

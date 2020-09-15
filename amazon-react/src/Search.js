@@ -20,7 +20,7 @@ function Search() {
                         rating={item.rating} 
                     />
                 } 
-            }) : <h1 style={{color: "white"}}>Sorry, the product you've searched for is not available!</h1>}
+            }) : <h1 className="search__notAvailable">{searchQ[1] ? "Sorry, " + searchQ[1] + " is not available!" : "You haven't entered a search query"}</h1>}
 
         </div>
     )
