@@ -32,8 +32,9 @@ function Header(event) {
     }
 
     let history = useHistory();
-    function sendSearch() {
-        history.push("/search")
+    function sendSearch(e) {
+        let nameAttr = e.target.getAttribute("name");
+        history.push("/search?" + nameAttr + "=" + searchQuery);
     }
     // function handleSearch(event) {
     //     const value = event.target.value

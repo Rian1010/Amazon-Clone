@@ -10,7 +10,7 @@ function Search() {
 
     return (
         <div className="search">
-            {searchQ[0] && productList.filter(item => item.title.toLowerCase().includes(searchQ[1]).toLowerCase).length > 0? productList.map(item => {
+            {searchQ[0] && productList.filter(item => item.title.toLowerCase().includes(searchQ[1].toLowerCase())).length > 0? productList.map(item => {
                 if (item.title.toLowerCase().includes(searchQ[1].toLowerCase())) {
                     return <Product 
                         id={item.prodID}
