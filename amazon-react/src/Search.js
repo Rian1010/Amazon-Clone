@@ -4,14 +4,16 @@ import productList from "./product-list";
 import SearchProduct from "./SearchProduct";
 
 function Search() {
-    let searchQ = window.location.href.split("=")
+    let searchQ = window.location.href.split("=");
+    let searchPercentage = searchQ[1].replace("%20", "+")
+    let query = searchPercentage.replace("+", " ")
     // if(item.title.includes(searchQ[1])) {
     //     console.log("ITEM", item.title)
 
     return (
         <div className="search">
-            {searchQ[1] && productList.filter(item => item.title.toLowerCase().includes(searchQ[1].toLowerCase())).length > 0? productList.map(item => {
-                if (item.title.toLowerCase().includes(searchQ[1].toLowerCase())) {
+            {query && productList.filter(item => item.title.toLowerCase().includes(query.toLowerCase())).length > 0? productList.map(item => {
+                if (item.title.toLowerCase().includes(query.toLowerCase())) {
                     return <SearchProduct 
                         id={item.prodID}
                         title={item.title}

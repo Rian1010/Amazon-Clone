@@ -27,6 +27,11 @@ function Header(event) {
         history.push("/search?" + nameAttr + "=" + searchQuery);
     }
 
+    function sendClickedSearch(e) {
+        let wordClicked = e.currentTarget.innerHTML;
+        history.push("/search?searchQ=" + wordClicked);
+    }
+
     const handleAuthentication = () => {
         if (user) {
             auth.signOut();
@@ -51,15 +56,13 @@ function Header(event) {
                         required
                     />
                     
-                    
-                    
                     <button className="btn" type="submit">
                         <SearchIcon className="header__searchIcon" />
                     </button>
                 </form>
                 {word && productList.filter(product => product.title.toLowerCase().includes(word.toLowerCase())).length > 0 ? productList.map(product => {
                         if (product.title.toLowerCase().includes(word.toLowerCase())) {
-                            return <div className="header__searchSuggestions">{ product.title.slice(0, 10) + " | " }</div>
+                            return <div className="header__searchSuggestions" onClick={word ? sendClickedSearch : null}>{ product.title.slice(0, 50) }</div>
                         }
                     }) : ""
                 }
