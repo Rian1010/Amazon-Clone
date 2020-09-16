@@ -1,0 +1,41 @@
+.footer__backToTop {
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 0;
+    background-color: #37475A;
+}
+
+.footer__backToTop:hover {
+    background-color: #485769;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 40px 0;
+    background-color: #232F3E;
+}
+
+.footer__listHeading {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.footer > ul > li {
+    list-style: none;
+    color: white;
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+.footer > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Search.css';
 import productList from "./product-list";
-import Product from "./Product";
+import SearchProduct from "./SearchProduct";
 
 function Search() {
     let searchQ = window.location.href.split("=")
@@ -12,7 +12,7 @@ function Search() {
         <div className="search">
             {searchQ[1] && productList.filter(item => item.title.toLowerCase().includes(searchQ[1].toLowerCase())).length > 0? productList.map(item => {
                 if (item.title.toLowerCase().includes(searchQ[1].toLowerCase())) {
-                    return <Product 
+                    return <SearchProduct 
                         id={item.prodID}
                         title={item.title}
                         price={item.price}

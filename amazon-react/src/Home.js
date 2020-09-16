@@ -1,17 +1,21 @@
 import React from 'react';
 import "./Home.css";
-import Product from './Product'
+import Product from './Product';
+import Footer from './Footer';
 
 function Home() {
     
     return (
         <div className="home">
             <div className="home__container">
-                <img
-                    className="home__image" 
-                    src="https://images-eu.ssl-images-amazon.com/images/G/03/kindle/journeys/YTNkYTJjMWMt/YTNkYTJjMWMt-Mzc4NDcxNzYt-w1500._CB410650290_.jpg" 
-                    alt="" 
-                />
+            {/* <video  loop autoPlay muted className="home__image">
+                <source src="../public/Video/battlefield-trailer.mp4" type="video/mp4" />
+            </video> */}
+            <img
+                className="home__image" 
+                src="https://images-eu.ssl-images-amazon.com/images/G/03/kindle/journeys/YTNkYTJjMWMt/YTNkYTJjMWMt-Mzc4NDcxNzYt-w1500._CB410650290_.jpg" 
+                alt="" 
+            />
 
             <div className="home__row">
                 <Product 
@@ -63,6 +67,7 @@ function Home() {
                     rating={5}
                 />
             </div>
+            <Footer />
         </div>
     </div>
     )

@@ -19,7 +19,6 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
                 <p className="checkoutProduct__product">
-                    <small>€</small>
                     <strong>{price}</strong>
                 </p>
                 <div className="checkoutProduct__rating">
