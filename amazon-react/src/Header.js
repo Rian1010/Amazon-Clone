@@ -9,25 +9,15 @@ import productList from "./product-list";
 import Product from "./Product";
 import { useQuery } from "react-query";
 
-function Header(event) {
-    const  [searchQuery, setSearchQuery] = useState("")
-    // useState({
-    //     searchID: "",
-    //     searchQ: "",
-    //     searchPrice: "",
-    //     searchImage: "",
-    //     searchRating: ""
-    // })
-    console.log(searchQuery)
-    
-    // console.log(searchQuery, "HERE")
 
-    // let theSearch = productList.some(searchQuery => searchQuery.title === productList.title)
-    
-    // console.log(theSearch, "seee")
+function Header(event) {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [word, setWord] = useState("")
+
     const [{ basket, user }] = useStateValue();
     function handleSearch(event) {
-        const searching = event.target.value
+        const searching = event.target.value;
+        setWord(searching)
         setSearchQuery(searching)
     }
 
@@ -36,57 +26,13 @@ function Header(event) {
         let nameAttr = e.target.getAttribute("name");
         history.push("/search?" + nameAttr + "=" + searchQuery);
     }
-    // function handleSearch(event) {
-    //     const value = event.target.value
-    //     setSearchQuery(prevValue => {
-    //         productList.map(item => {
-    //             console.log(value, "&", item.title)
-    //             if(item.title.includes(value)) {
-    //                 return searchQuery.searchID = item.id, 
-    //                         searchQuery.searchQ = item.title, 
-    //                         searchQuery.searchPrice = item.price, 
-    //                         searchQuery.searchImage = item.image,
-    //                         searchQuery.searchRating = item.rating,
-    //                  <Product
-    //                 id=""
-    //                 title={searchQuery}
-    //                 price={1}
-    //                 image=""
-    //                 rating={1}
-    //                 />
-    //             }
-    //             else if (value == "") {
-    //                 return searchQuery.searchQ = "",
-    //                 searchQuery.searchID = "",
-    //                 searchQuery.searchPrice = "",
-    //                 searchQuery.searchImage = "",
-    //                 searchQuery.searchRating = 0
-    //             }
-    //             else {
-    //                 return searchQuery.searchQ = "Sorry, No Product Was Found",
-    //                         searchQuery.searchID = "",
-    //                         searchQuery.searchPrice = "",
-    //                         searchQuery.searchImage = "",
-    //                         searchQuery.searchRating = 0
-    //             }
-    //         })
-                 
-    //         return {
-    //             ...prevValue,
-    //             searchVal: value,
-    //         }
-    //     })
-    // }
 
     const handleAuthentication = () => {
         if (user) {
             auth.signOut();
         }
     }
-    // const { data, status } = useQuery(searchQuery, useStateValue());
-    // const UserSearch = () => {
-    //     console.log("DATA: ", data);
-    // }
+
     return (
         <div>
         <div className='header'>
@@ -104,10 +50,19 @@ function Header(event) {
                         className="header__searchInput"
                         required
                     />
+                    
+                    
+                    
                     <button className="btn" type="submit">
                         <SearchIcon className="header__searchIcon" />
                     </button>
                 </form>
+                {word && productList.filter(product => product.title.toLowerCase().includes(word.toLowerCase())).length > 0 ? productList.map(product => {
+                        if (product.title.toLowerCase().includes(word.toLowerCase())) {
+                            return <div className="header__searchSuggestions">{ product.title.slice(0, 10) + " | " }</div>
+                        }
+                    }) : ""
+                }
             </div>
 
             <div className="header__nav">

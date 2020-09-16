@@ -1,10 +1,12 @@
 import React from 'react';
 import "./Home.css";
 import Product from './Product';
-import Footer from './Footer';
 
 function Home() {
-    
+    const scrollTop = () =>{
+        window.scrollTo({top: 0, behavior: 'smooth'});
+     };
+
     return (
         <div className="home">
             <div className="home__container">
@@ -141,7 +143,9 @@ function Home() {
                     rating={4}
                 />
             </div>
-            <Footer />
+            <div onClick={scrollTop} className="footer__backToTop">
+            <p>Back to the top</p>
+        </div>
         </div>
     </div>
     )

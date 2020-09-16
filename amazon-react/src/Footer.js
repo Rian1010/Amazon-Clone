@@ -2,15 +2,10 @@ import React, { useEffect } from 'react';
 import './Footer.css';
 
 function Footer() {
-    const scrollTop = () =>{
-        window.scrollTo({top: 0, behavior: 'smooth'});
-     };
-
+    
     return (
         <div>
-        <div onClick={scrollTop} className="footer__backToTop">
-            <p>Back to the top</p>
-        </div>
+        
 
         <div className="footer">
             <ul>
