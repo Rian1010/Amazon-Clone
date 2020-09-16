@@ -67,6 +67,7 @@ function Home() {
                     rating={4}
                 />
             </div>
+            <div className="home__ad"></div>
             <div className="home__row">
                 <Product 
                     id="3241430"
@@ -112,6 +113,10 @@ function Home() {
                     image="https://images-na.ssl-images-amazon.com/images/I/71jMHuSrUUL._AC_SL1500_.jpg"
                     rating={4}
                 />
+            </div>
+            <div className="home__adContainer">
+                <div className="home__adLeft"></div>
+                <div className="home__adRight"></div>
             </div>
             <div className="home__row">
                 <Product 
