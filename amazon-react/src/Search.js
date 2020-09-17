@@ -5,10 +5,8 @@ import SearchProduct from "./SearchProduct";
 
 function Search() {
     let searchQ = window.location.href.split("=");
-    let searchPercentage = searchQ[1].replace("%20", "+")
-    let query = searchPercentage.replace("+", " ")
-    // if(item.title.includes(searchQ[1])) {
-    //     console.log("ITEM", item.title)
+    let searchPercentage = decodeURI(searchQ[1]);
+    let query = searchPercentage.replace("+", " ");
 
     return (
         <div className="search">

@@ -30,6 +30,7 @@ function Header(event) {
     function sendClickedSearch(e) {
         let wordClicked = e.currentTarget.innerHTML;
         history.push("/search?searchQ=" + wordClicked);
+        window.location.reload();
     }
 
     const handleAuthentication = () => {

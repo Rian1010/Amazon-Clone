@@ -11,6 +11,10 @@
     margin-bottom: 10px;
 }
 
+.checkout__paddingLeft {
+    padding-left: 10px;
+}
+
 .checkout__text {
     color: white;
 }
