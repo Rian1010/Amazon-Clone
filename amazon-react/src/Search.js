@@ -7,6 +7,7 @@ function Search() {
     let searchQ = window.location.href.split("=");
     let searchPercentage = decodeURI(searchQ[1]);
     let query = searchPercentage.replace("+", " ");
+    console.log("TRIMMED ", searchPercentage)
 
     return (
         <div className="search">
@@ -20,7 +21,7 @@ function Search() {
                         rating={item.rating} 
                     />
                 } 
-            }) : <h1 className="search__notAvailable">{searchQ[1] ? "Sorry, " + searchQ[1] + " is not available!" : "You haven't entered a search query"}</h1>}
+            }) : <h1 className="search__notAvailable">{query ? "Sorry, " + query + " is not available!" : "You haven't entered a search query"}</h1>}
 
         </div>
     )

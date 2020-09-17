@@ -61,12 +61,15 @@ function Header(event) {
                         <SearchIcon className="header__searchIcon" />
                     </button>
                 </form>
+                <div className="header__searchSuggestionsContainer">
+                {/* The Code Below, Generates Search Suggestions */}
                 {word && productList.filter(product => product.title.toLowerCase().includes(word.toLowerCase())).length > 0 ? productList.map(product => {
                         if (product.title.toLowerCase().includes(word.toLowerCase())) {
-                            return <div className="header__searchSuggestions" onClick={word ? sendClickedSearch : null}>{ product.title.slice(0, 50) }</div>
+                            return <div className="header__searchSuggestions" onClick={word ? sendClickedSearch : null}>{ product.title.slice(0, 70) }</div>
                         }
                     }) : ""
                 }
+                </div>
             </div>
 
             <div className="header__nav">
