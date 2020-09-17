@@ -1,6 +1,9 @@
-
+.payment {
+    min-height: 70vh;
+}
 
 .payment__container {
+    height: 70vh;
     color: black;
     background-color: white;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Search.css';
 import productList from "./product-list";
 import SearchProduct from "./SearchProduct";
@@ -21,8 +21,7 @@ function Search() {
                         rating={item.rating} 
                     />
                 } 
-            }) : <h1 className="search__notAvailable">{query ? "Sorry, " + query + " is not available!" : "You haven't entered a search query"}</h1>}
-
+            }) : <h1 className="search__notAvailable">{searchQ[1] ? "Sorry, "  + query + "is not available! (As this is a fake website, only the products available on the home page can be searched)" : "You haven't entered a search query"}</h1>}
         </div>
     )
 }

@@ -1,3 +1,8 @@
+.search {
+    min-height: 70vh;
+    padding: 10px 30px;
+}
+
 .search__notAvailable {
     padding: 50px 0;
     color: #fff;
