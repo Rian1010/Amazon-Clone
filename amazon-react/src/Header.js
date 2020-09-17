@@ -62,7 +62,7 @@ function Header(event) {
                     {/* The Code Below, Generates Search Suggestions */}
                     {word && productList.filter(product => product.title.toLowerCase().includes(word.toLowerCase())).length > 0 ? productList.map(product => {
                             if (product.title.toLowerCase().includes(word.toLowerCase())) {
-                                return <div className="header__searchSuggestions" onClick={word ? sendClickedSearch : null}>{ product.title.slice(0, 70) }</div>
+                                return <div className="header__searchSuggestions" onClick={word ? sendClickedSearch : null}>{ product.title.slice(0, 80) }{product.title.length > 80 ? "..." : ""}</div>
                             }
                         }) : ""
                     }

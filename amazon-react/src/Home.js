@@ -130,7 +130,7 @@ function Home() {
                 />
                 <Product 
                     id="99124312"
-                    title="QUMOX 2X Wireless Joystick Gamepad Pro Controller for Nintendo Wii U + Cable Black"
+                    title="QUMOX 2X Wireless Joystick Gamepad Pro Controller for Nintendo Wii U And Cable Black"
                     price={38.99}
                     image="https://images-na.ssl-images-amazon.com/images/I/516ON%2BIicgL._AC_.jpg"
                     rating={5}
