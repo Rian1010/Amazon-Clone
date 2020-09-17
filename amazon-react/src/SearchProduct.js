@@ -30,6 +30,7 @@ function SearchProduct({ id, title, image, price, rating }) {
 
                 <p className="searchProduct__price">
                     <strong>{price}</strong>
+                    <small>€</small>
                 </p>
                 <div className="searchProduct__rating">
                     {Array(rating).fill().map((_, i) => (
