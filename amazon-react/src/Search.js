@@ -6,8 +6,8 @@ import SearchProduct from "./SearchProduct";
 function Search() {
     let searchQ = window.location.href.split("=");
     let searchPercentage = decodeURI(searchQ[1]);
-    let query = searchPercentage.replace("+", " ");
-    console.log("TRIMMED ", searchPercentage)
+    let removeDots = searchPercentage.replace("...", "");
+    let query = removeDots.replace("+", " ");
 
     return (
         <div className="search">
